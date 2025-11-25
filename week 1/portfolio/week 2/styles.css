@@ -1,0 +1,71 @@
+.static-box {
+    background-color: lightcoral;
+    color: white;
+    padding: 20px;
+    border: 2px dotted black;
+    /* Even if you set these, they won't move the box */
+    position: static;
+}
+
+.relative-box {
+    background-color: lightskyblue;
+    color: rgb(0, 0, 0);
+    padding: 20px;
+    border: 2px solid blue;
+
+    position: relative;
+    /* Move 30px down from its original top edge and 20px right */
+}
+
+.normal-box{
+    background-color: lightgrey;
+    padding: 20px;
+    border: 2px solid gray;
+    /* This box does not move up to fill the relative bos's original spot */
+}
+
+.parent-relative {
+    border-color: #f0f0f0;
+    padding: 50px;
+    border: 3px dashed black;
+    height: 200px;
+    /* 1. This makes it the positioning context for its absolute child */
+    position: relative;
+}
+
+.absolute-box {
+    background-color: lightgreen;
+    color: black;
+    padding: 10px;
+    border: 2px solid green;
+    width: 100px;
+
+    position: absolute;
+    /* Positions relative to the top-right corner of the parent */
+    top: 10px;
+    right: 10px;
+}
+
+.absolute-box2 {
+    position: absolute;
+    left: 10px;
+    top: 10px;
+    width: 100px;
+    height: 100px;
+    border: 3px solid green;
+    background-color: lightgreen;
+}
+
+.fixed-box {
+    background-color: #333;
+    color: white;
+    padding: 15px;
+    width: 100px;
+    text-align: center;
+
+    position: fixed;
+
+    bottom: 0;
+    right: 0;
+    z-index: 1000;
+}
