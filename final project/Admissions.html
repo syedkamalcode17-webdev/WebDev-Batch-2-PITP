@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admissions - MUET</title>
+    <link rel="stylesheet" href="/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <!-- Header & Navigation -->
+    <header>
+        <div class="container">
+            <nav>
+                <div class="logo">
+                    <i class="fas fa-university"></i>
+                    <span>MUET</span>
+                </div>
+                <button class="menu-toggle" id="menuToggle">
+                    <i class="fas fa-bars"></i>
+                </button>
+                <ul class="nav-links" id="navLinks">
+                    <li><a href="/Homepage.html"><i class="fas fa-home"></i> Home</a></li>
+                    <li><a href="/About MUET.html"><i class="fas fa-info-circle"></i> About MUET</a></li>
+                    <li><a href="/Admissions.html" class="active"><i class="fas fa-user-graduate"></i> Admissions</a></li>
+                    <li><a href="/Departments.html"><i class="fas fa-building"></i> Departments</a></li>
+                    <li><a href="/Contact.html"><i class="fas fa-envelope"></i> Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero" style="background-image: url('https://images.unsplash.com/photo-1523050854058-8df90110c9f1?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80');">
+        <div class="hero-content">
+            <h1>Admissions 2023-24</h1>
+            <p>Begin Your Engineering Journey at Pakistan's Premier University</p>
+            <a href="#apply-now" class="btn">Apply Online</a>
+        </div>
+    </section>
+
+    <!-- Admissions Content -->
+    <section class="section">
+        <div class="container">
+            <div class="cards">
+                <div class="card">
+                    <h2><i class="fas fa-calendar-alt"></i> Admission Schedule</h2>
+                    <table style="width: 100%; border-collapse: collapse; margin-top: 1rem;">
+                        <tr style="background: #004080; color: white;">
+                            <th style="padding: 12px;">Event</th>
+                            <th style="padding: 12px;">Date</th>
+                        </tr>
+                        <tr style="border-bottom: 1px solid #ddd;">
+                            <td style="padding: 12px;">Online Application Start</td>
+                            <td style="padding: 12px;">1st October 2023</td>
+                        </tr>
+                        <tr style="border-bottom: 1px solid #ddd;">
+                            <td style="padding: 12px;">Last Date to Apply</td>
+                            <td style="padding: 12px;">30th November 2023</td>
+                        </tr>
+                        <tr style="border-bottom: 1px solid #ddd;">
+                            <td style="padding: 12px;">Entry Test</td>
+                            <td style="padding: 12px;">15th December 2023</td>
+                        </tr>
+                        <tr style="border-bottom: 1px solid #ddd;">
+                            <td style="padding: 12px;">Merit List Announcement</td>
+                            <td style="padding: 12px;">31st December 2023</td>
+                        </tr>
+                        <tr>
+                            <td style="padding: 12px;">Classes Commence</td>
+                            <td style="padding: 12px;">15th January 2024</td>
+                        </tr>
+                    </table>
+                </div>
+                <div class="card">
+                    <h2><i class="fas fa-graduation-cap"></i> Programs Offered</h2>
+                    <h3>Undergraduate Programs (B.E.)</h3>
+                    <ul style="padding-left: 20px; margin-bottom: 1.5rem;">
+                        <li>Civil Engineering</li>
+                        <li>Electrical Engineering</li>
+                        <li>Mechanical Engineering</li>
+                        <li>Computer Systems Engineering</li>
+                        <li>Software Engineering</li>
+                        <li>Electronic Engineering</li>
+                        <li>Telecommunication Engineering</li>
+                        <li>Industrial Engineering</li>
+                    </ul>
+                    
+                    <h3>Postgraduate Programs</h3>
+                    <ul style="padding-left: 20px;">
+                        <li>M.E./M.S. in Engineering Disciplines</li>
+                        <li>Ph.D. in Engineering & Technology</li>
+                        <li>MBA (Technology Management)</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="section">
+                <h2 class="section-title">Eligibility Criteria</h2>
+                <div class="cards">
+                    <div class="card">
+                        <h3><i class="fas fa-check-circle"></i> Undergraduate Programs</h3>
+                        <ul>
+                            <li>Intermediate (Pre-Engineering) with minimum 60% marks</li>
+                            <li>Entry Test (MUET Entry Test/NTS)</li>
+                            <li>Matriculation with minimum 60% marks</li>
+                            <li>Domicile of Sindh Province (for Sindh quota)</li>
+                        </ul>
+                    </div>
+                    <div class="card">
+                        <h3><i class="fas fa-check-circle"></i> Postgraduate Programs</h3>
+                        <ul>
+                            <li>B.E./B.Sc. Engineering with minimum 2.5 CGPA</li>
+                            <li>GAT (General) with minimum 50% score</li>
+                            <li>Departmental Test/Interview</li>
+                            <li>Two recommendation letters</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Application Form -->
+            <div class="card" id="apply-now" style="margin-top: 3rem;">
+                <h2><i class="fas fa-edit"></i> Online Application Form</h2>
+                <form id="admissionForm" style="margin-top: 1rem;">
+                    <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; margin-bottom: 1rem;">
+                        <input type="text" placeholder="First Name" required>
+                        <input type="text" placeholder="Last Name" required>
+                    </div>
+                    <input type="email" placeholder="Email Address" required style="width: 100%; margin-bottom: 1rem; padding: 12px;">
+                    <input type="text" placeholder="CNIC/B-Form Number" required style="width: 100%; margin-bottom: 1rem; padding: 12px;">
+                    
+                    <select style="width: 100%; padding: 12px; margin-bottom: 1rem;">
+                        <option value="">Select Program</option>
+                        <option value="civil">Civil Engineering</option>
+                        <option value="electrical">Electrical Engineering</option>
+                        <option value="mechanical">Mechanical Engineering</option>
+                        <option value="computer">Computer Systems Engineering</option>
+                        <option value="software">Software Engineering</option>
+                    </select>
+                    
+                    <input type="file" style="margin-bottom: 1rem; padding: 12px; width: 100%;">
+                    <label style="display: block; margin-bottom: 1rem;">
+                        <input type="checkbox" required> I agree to the terms and conditions
+                    </label>
+                    <button type="submit" class="btn">Submit Application</button>
+                </form>
+            </div>
+
+            <!-- Fee Structure -->
+            <div class="card" style="margin-top: 3rem;">
+                <h2><i class="fas fa-money-bill-wave"></i> Fee Structure (Per Semester)</h2>
+                <table style="width: 100%; border-collapse: collapse; margin-top: 1rem;">
+                    <tr style="background: #004080; color: white;">
+                        <th style="padding: 12px;">Program</th>
+                        <th style="padding: 12px;">Tuition Fee</th>
+                        <th style="padding: 12px;">Other Charges</th>
+                        <th style="padding: 12px;">Total</th>
+                    </tr>
+                    <tr style="border-bottom: 1px solid #ddd;">
+                        <td style="padding: 12px;">B.E. Programs</td>
+                        <td style="padding: 12px;">PKR 45,000</td>
+                        <td style="padding: 12px;">PKR 15,000</td>
+                        <td style="padding: 12px;">PKR 60,000</td>
+                    </tr>
+                    <tr style="border-bottom: 1px solid #ddd;">
+                        <td style="padding: 12px;">M.E./M.S. Programs</td>
+                        <td style="padding: 12px;">PKR 60,000</td>
+                        <td style="padding: 12px;">PKR 20,000</td>
+                        <td style="padding: 12px;">PKR 80,000</td>
+                    </tr>
+                    <tr>
+                        <td style="padding: 12px;">Ph.D. Programs</td>
+                        <td style="padding: 12px;">PKR 75,000</td>
+                        <td style="padding: 12px;">PKR 25,000</td>
+                        <td style="padding: 12px;">PKR 100,000</td>
+                    </tr>
+                </table>
+                <p style="margin-top: 1rem; font-style: italic;">*Scholarships available for merit and need-based students</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>Admissions Office</h3>
+                    <p>MUET, Jamshoro</p>
+                    <p>Email: admissions@muet.edu.pk</p>
+                    <p>Phone: +92-22-2772250 Ext: 2103</p>
+                </div>
+                <div class="footer-section">
+                    <h3>Quick Links</h3>
+                    <ul style="list-style: none;">
+                        <li><a href="Homepage.html" style="color: #ccc;">Home</a></li>
+                        <li><a href="About MUET.html" style="color: #ccc;">About MUET</a></li>
+                        <li><a href="Admissions.html" style="color: #ccc;">Admissions</a></li>
+                        <li><a href="Departments.html" style="color: #ccc;">Departments</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h3>Office Hours</h3>
+                    <p>Monday - Friday: 9:00 AM - 5:00 PM</p>
+                    <p>Saturday: 9:00 AM - 1:00 PM</p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2023 MUET. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="/main.js"></script>
+    <script>
+        // Admission form submission
+        const admissionForm = document.getElementById('admissionForm');
+        if (admissionForm) {
+            admissionForm.addEventListener('submit', function(e) {
+                e.preventDefault();
+                alert('Thank you! Your application has been submitted successfully. You will receive a confirmation email shortly.');
+                this.reset();
+            });
+        }
+    </script>
+</body>
+</html>
