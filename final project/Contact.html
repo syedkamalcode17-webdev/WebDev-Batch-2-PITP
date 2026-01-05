@@ -1,0 +1,484 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us - MUET</title>
+    <link rel="stylesheet" href="./style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        .contact-info {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+            margin-bottom: 3rem;
+        }
+        
+        .contact-item {
+            background: white;
+            padding: 2rem;
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+            text-align: center;
+            transition: transform 0.3s;
+        }
+        
+        .contact-item:hover {
+            transform: translateY(-5px);
+        }
+        
+        .contact-icon {
+            font-size: 2.5rem;
+            color: #004080;
+            margin-bottom: 1rem;
+        }
+        
+        form {
+            display: flex;
+            flex-direction: column;
+            gap: 1.5rem;
+        }
+        
+        input, textarea, select {
+            padding: 15px;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            font-size: 1rem;
+            transition: border 0.3s;
+        }
+        
+        input:focus, textarea:focus, select:focus {
+            outline: none;
+            border-color: #004080;
+            box-shadow: 0 0 0 3px rgba(0, 64, 128, 0.1);
+        }
+        
+        .map-container {
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+            margin-top: 3rem;
+        }
+        
+        .office-hours {
+            background: #f8f9fa;
+            padding: 2rem;
+            border-radius: 10px;
+            margin-top: 2rem;
+        }
+        
+        .office-hours table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+        
+        .office-hours td {
+            padding: 12px;
+            border-bottom: 1px solid #ddd;
+        }
+        
+        .office-hours tr:last-child td {
+            border-bottom: none;
+        }
+    </style>
+</head>
+<body>
+    <!-- Header & Navigation -->
+    <header>
+        <div class="container">
+            <nav>
+                <div class="logo">
+                    <i class="fas fa-university"></i>
+                    <span>MUET</span>
+                </div>
+                <button class="menu-toggle" id="menuToggle">
+                    <i class="fas fa-bars"></i>
+                </button>
+                <ul class="nav-links" id="navLinks">
+                    <li><a href="./Homepage.html"><i class="fas fa-home"></i> Home</a></li>
+                    <li><a href="./About MUET.html"><i class="fas fa-info-circle"></i> About MUET</a></li>
+                    <li><a href="./Admissions.html"><i class="fas fa-user-graduate"></i> Admissions</a></li>
+                    <li><a href="./Departments.html"><i class="fas fa-building"></i> Departments</a></li>
+                    <li><a href="./Contact.html" class="active"><i class="fas fa-envelope"></i> Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero" style="background-image: url('https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80');">
+        <div class="hero-content">
+            <h1>Contact Us</h1>
+            <p>Get in Touch with Mehran University of Engineering & Technology</p>
+        </div>
+    </section>
+
+    <!-- Contact Content -->
+    <section class="section">
+        <div class="container">
+            <!-- Contact Information Cards -->
+            <div class="contact-info">
+                <div class="contact-item">
+                    <div class="contact-icon">
+                        <i class="fas fa-map-marker-alt"></i>
+                    </div>
+                    <h3>Address</h3>
+                    <p>Mehran University of Engineering & Technology</p>
+                    <p>Indus Highway, Jamshoro</p>
+                    <p>Sindh, Pakistan - 76062</p>
+                </div>
+                
+                <div class="contact-item">
+                    <div class="contact-icon">
+                        <i class="fas fa-phone"></i>
+                    </div>
+                    <h3>Phone Numbers</h3>
+                    <p><strong>Main Switchboard:</strong><br> +92-22-2772250</p>
+                    <p><strong>Admissions:</strong><br> +92-22-2772251</p>
+                    <p><strong>Examination:</strong><br> +92-22-2772252</p>
+                    <p><strong>Fax:</strong>+92-22-2772253</p>
+                </div>
+                
+                <div class="contact-item">
+                    <div class="contact-icon">
+                        <i class="fas fa-envelope"></i>
+                    </div>
+                    <h3>Email Addresses</h3>
+                    <p><strong>General Inquiry:</strong> info@muet.edu.pk</p>
+                    <p><strong>Admissions:</strong> admissions@muet.edu.pk</p>
+                    <p><strong>Registrar:</strong> registrar@muet.edu.pk</p>
+                    <p><strong>Examination:</strong> controller@muet.edu.pk</p>
+                </div>
+                
+                <div class="contact-item">
+                    <div class="contact-icon">
+                        <i class="fas fa-clock"></i>
+                    </div>
+                    <h3>Office Hours</h3>
+                    <p><strong>Monday - Friday:</strong><br> 9:00 AM - 5:00 PM</p>
+                    <p><strong>Saturday:</strong><br> 9:00 AM - 1:00 PM</p>
+                    <p><strong>Sunday:</strong> Closed</p>
+                </div>
+            </div>
+
+            <!-- Contact Form and Map -->
+            <div class="cards">
+                <!-- Contact Form -->
+                <div class="card">
+                    <h2><i class="fas fa-paper-plane"></i> Send Us a Message</h2>
+                    <form id="contactForm">
+                        <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 1rem;">
+                            <div>
+                                <label for="name">Full Name *</label>
+                                <input type="text" id="name" placeholder="Enter your name" required>
+                            </div>
+                            <div>
+                                <label for="email">Email Address *</label>
+                                <input type="email" id="email" placeholder="Enter your email" required>
+                            </div>
+                        </div>
+                        
+                        <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 1rem;">
+                            <div>
+                                <label for="phone">Phone Number</label>
+                                <input type="tel" id="phone" placeholder="Enter your phone number">
+                            </div>
+                            <div>
+                                <label for="subject">Subject</label>
+                                <select id="subject">
+                                    <option value="">Select a subject</option>
+                                    <option value="admission">Admission Inquiry</option>
+                                    <option value="academic">Academic Matters</option>
+                                    <option value="examination">Examination Related</option>
+                                    <option value="research">Research Collaboration</option>
+                                    <option value="other">Other</option>
+                                </select>
+                            </div>
+                        </div>
+                        
+                        <div>
+                            <label for="message">Your Message *</label><br>
+                            <textarea id="message" rows="10" cols="58" placeholder="Type your message here..." required></textarea>
+                        </div>
+                        
+                        <div>
+                            <label style="display: flex; align-items: center; gap: 10px;">
+                                <input type="checkbox" required>
+                                <span>I agree to the terms and conditions</span>
+                            </label>
+                        </div>
+                        
+                        <button type="submit" class="btn" style="align-self: flex-start;">
+                            <i class="fas fa-paper-plane"></i> Send Message
+                        </button>
+                    </form>
+                </div>
+                
+                <!-- Quick Contacts -->
+                <div class="card">
+                    <h2><i class="fas fa-university"></i> Important Contacts</h2>
+                    
+                    <div style="margin-bottom: 2rem;">
+                        <h3><i class="fas fa-user-tie"></i> Key Personnel</h3>
+                        <p><strong>Vice Chancellor:</strong> Prof. Dr. Tauha Hussain Ali</p>
+                        <p><strong>Registrar:</strong> Prof. Dr. Abdul Qadeer Khan Rajput</p>
+                        <p><strong>Controller of Examinations:</strong> Prof. Dr. Mukhtiar Ali Unar</p>
+                        <p><strong>Treasurer:</strong> Prof. Dr. Khan Muhammad Brohi</p>
+                    </div>
+                    
+                    <div style="margin-bottom: 2rem;">
+                        <h3><i class="fas fa-building"></i> Departmental Contacts</h3>
+                        <p><strong>Civil Engineering:</strong> +92-22-2772250 Ext. 2101</p>
+                        <p><strong>Electrical Engineering:</strong> +92-22-2772250 Ext. 2102</p>
+                        <p><strong>Computer Systems:</strong> +92-22-2772250 Ext. 2103</p>
+                        <p><strong>Mechanical Engineering:</strong> +92-22-2772250 Ext. 2104</p>
+                    </div>
+                    
+                    <div class="office-hours">
+                        <h3><i class="fas fa-calendar-alt"></i> Visiting Hours</h3>
+                        <table>
+                            <tr>
+                                <td><strong>For Students:</strong></td>
+                                <td>Monday - Thursday<br> (2:00 PM - 4:00 PM)</td>
+                            </tr>
+                            <tr>
+                                <td><strong>For Parents:</strong></td>
+                                <td>Friday (10:00 AM - 12:00 PM)</td>
+                            </tr>
+                            <tr>
+                                <td><strong>For Alumni:</strong></td>
+                                <td>Saturday (10:00 AM - 1:00 PM)</td>
+                            </tr>
+                            <tr>
+                                <td><strong>Appointment Required:</strong></td>
+                                <td>For meetings with senior officials</td>
+                            </tr>
+                        </table>
+                    </div>
+                    
+                    <div style="margin-top: 2rem; padding: 1.5rem; background: #004080; color: white; border-radius: 8px;">
+                        <h3><i class="fas fa-exclamation-circle"></i> Emergency Contact</h3>
+                        <p><strong>Campus Security:</strong> +92-300-1234567 (24/7)</p>
+                        <p><strong>Medical Center:</strong> +92-22-2772250 Ext. 1999</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Google Map -->
+            <div class="map-container">
+                <h2 class="section-title" style="text-align: left; margin-bottom: 1rem;">Location Map</h2>
+                <div style="height: 400px; background: #f0f0f0; display: flex; align-items: center; justify-content: center; color: #666;">
+                    <div style="text-align: center;">
+                        <i class="fas fa-map fa-4x" style="margin-bottom: 1rem;"></i>
+                        <h3>MUET Campus Location</h3>
+                        <p>Indus Highway, Jamshoro, Sindh, Pakistan</p>
+                        <p style="margin-top: 1rem;">
+                            <a href="https://maps.google.com/?q=Mehran+University+of+Engineering+and+Technology+Jamshoro" 
+                               target="_blank" 
+                               class="btn" 
+                               style="background: #004080;">
+                                <i class="fas fa-external-link-alt"></i> Open in Google Maps
+                            </a>
+                        </p>
+                    </div>
+                </div>
+                <iframe 
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3603.894564053519!2d68.2580039753887!3d25.40833967757572!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x394c795e86cdf11b%3A0xef1bd0f6ec31ced3!2sMehran%20University%20of%20Engineering%20and%20Technology!5e0!3m2!1sen!2s!4v1767354402551!5m2!1sen!2s" 
+                    width="100%" 
+                    height="400" 
+                    style="border:0;" 
+                    allowfullscreen="" 
+                    loading="lazy" 
+                    referrerpolicy="no-referrer-when-downgrade">
+                </iframe>
+            </div>
+
+            <!-- Social Media -->
+            <div class="card" style="margin-top: 3rem; text-align: center;">
+                <h2><i class="fas fa-hashtag"></i> Connect With Us</h2>
+                <p style="margin-bottom: 1.5rem;">Follow MUET on social media for latest updates and announcements</p>
+                <div style="display: flex; justify-content: center; gap: 1.5rem; flex-wrap: wrap;">
+                    <a href="https://www.facebook.com/muet.pk/" style="font-size: 2rem; color: #4267B2;" title="Facebook">
+                        <i class="fab fa-facebook"></i>
+                    </a>
+                    <a href="https://x.com/muetpk?lang=en" style="font-size: 2rem; color: #1DA1F2;" title="Twitter">
+                        <i class="fab fa-twitter"></i>
+                    </a>
+                    <a href="https://pk.linkedin.com/school/muet/" style="font-size: 2rem; color: #0077B5;" title="LinkedIn">
+                        <i class="fab fa-linkedin"></i>
+                    </a>
+                    <a href="#" style="font-size: 2rem; color: #E4405F;" title="Instagram">
+                        <i class="fab fa-instagram"></i>
+                    </a>
+                    <a href="https://www.youtube.com/@muet" style="font-size: 2rem; color: #FF0000;" title="YouTube">
+                        <i class="fab fa-youtube"></i>
+                    </a>
+                    <a href="https://www.muet.edu.pk/" style="font-size: 2rem; color: #333;" title="Website">
+                        <i class="fas fa-globe"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>Contact MUET</h3>
+                    <p>Mehran University of Engineering & Technology</p>
+                    <p>Indus Highway, Jamshoro, Sindh, Pakistan</p>
+                    <p>Postal Code: 76062</p>
+                </div>
+                <div class="footer-section">
+                    <h3>Quick Links</h3>
+                    <ul style="list-style: none;">
+                        <li><a href="Homepage.html" style="color: #ccc;">Home</a></li>
+                        <li><a href="About MUET.html" style="color: #ccc;">About MUET</a></li>
+                        <li><a href="Admissions.html" style="color: #ccc;">Admissions</a></li>
+                        <li><a href="Departments.html" style="color: #ccc;">Departments</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h3>Emergency Contacts</h3>
+                    <p><i class="fas fa-phone"></i> Campus Security: 300-1234567</p>
+                    <p><i class="fas fa-ambulance"></i> Medical Center: Ext. 1999</p>
+                    <p><i class="fas fa-envelope"></i> Email: info@muet.edu.pk</p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 MUET. All rights reserved. | 
+                    <a href="#" style="color: #ff9900;">Privacy Policy</a> | 
+                    <a href="#" style="color: #ff9900;">Terms of Use</a>
+                </p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="./main.js"></script>
+    <script>
+        // Enhanced contact form handling
+        document.addEventListener('DOMContentLoaded', function() {
+            const contactForm = document.getElementById('contactForm');
+            
+            if (contactForm) {
+                contactForm.addEventListener('submit', function(e) {
+                    e.preventDefault();
+                    
+                    // Get form values
+                    const name = document.getElementById('name').value.trim();
+                    const email = document.getElementById('email').value.trim();
+                    const phone = document.getElementById('phone').value.trim();
+                    const subject = document.getElementById('subject').value;
+                    const message = document.getElementById('message').value.trim();
+                    
+                    // Simple validation
+                    if (!name || !email || !message) {
+                        showAlert('Please fill all required fields (*).', 'error');
+                        return;
+                    }
+                    
+                    if (!validateEmail(email)) {
+                        showAlert('Please enter a valid email address.', 'error');
+                        return;
+                    }
+                    
+                    // Show success message
+                    showAlert('Thank you, ' + name + '! Your message has been sent successfully. We will contact you at ' + email + ' within 24-48 hours.', 'success');
+                    
+                    // Reset form
+                    contactForm.reset();
+                    
+                    // Scroll to top of form
+                    contactForm.scrollIntoView({ behavior: 'smooth', block: 'start' });
+                });
+            }
+            
+            function validateEmail(email) {
+                const re = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+                return re.test(email);
+            }
+            
+            function showAlert(message, type) {
+                // Remove existing alert if any
+                const existingAlert = document.querySelector('.custom-alert');
+                if (existingAlert) {
+                    existingAlert.remove();
+                }
+                
+                // Create alert element
+                const alertDiv = document.createElement('div');
+                alertDiv.className = `custom-alert ${type}`;
+                alertDiv.innerHTML = `
+                    <span>${message}</span>
+                    <button onclick="this.parentElement.remove()">&times;</button>
+                `;
+                
+                // Add styles
+                alertDiv.style.cssText = `
+                    position: fixed;
+                    top: 100px;
+                    right: 20px;
+                    padding: 1rem 1.5rem;
+                    border-radius: 8px;
+                    box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+                    z-index: 1000;
+                    display: flex;
+                    align-items: center;
+                    justify-content: space-between;
+                    gap: 1rem;
+                    max-width: 500px;
+                    animation: slideIn 0.3s ease;
+                `;
+                
+                if (type === 'success') {
+                    alertDiv.style.background = '#d4edda';
+                    alertDiv.style.color = '#155724';
+                    alertDiv.style.border = '1px solid #c3e6cb';
+                } else {
+                    alertDiv.style.background = '#f8d7da';
+                    alertDiv.style.color = '#721c24';
+                    alertDiv.style.border = '1px solid #f5c6cb';
+                }
+                
+                // Add close button styles
+                const closeBtn = alertDiv.querySelector('button');
+                closeBtn.style.cssText = `
+                    background: none;
+                    border: none;
+                    font-size: 1.5rem;
+                    cursor: pointer;
+                    padding: 0;
+                    line-height: 1;
+                `;
+                
+                document.body.appendChild(alertDiv);
+                
+                // Auto remove after 5 seconds
+                setTimeout(() => {
+                    if (alertDiv.parentElement) {
+                        alertDiv.remove();
+                    }
+                }, 5000);
+            }
+            
+            // Add CSS animation
+            const style = document.createElement('style');
+            style.textContent = `
+                @keyframes slideIn {
+                    from {
+                        transform: translateX(100%);
+                        opacity: 0;
+                    }
+                    to {
+                        transform: translateX(0);
+                        opacity: 1;
+                    }
+                }
+            `;
+            document.head.appendChild(style);
+        });
+    </script>
+</body>
+</html>
